@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Check, ShieldAlert, RefreshCw, Lock } from "lucide-react";
+import { Check } from "lucide-react";
 
 export const Route = createFileRoute("/pricing")({
   head: () => ({
@@ -74,24 +74,6 @@ const PLANS = [
       "EARLY ACCESS TO NEW FEATURES",
     ],
     prices: [350, 500, 600, 700],
-  },
-];
-
-const POLICIES = [
-  {
-    icon: RefreshCw,
-    title: "7-Day Technical Refund Policy",
-    text: "We offer a strict 7-day money-back guarantee for technical software malfunctions. If the SmartCare TV application fails to run on your verified hardware and our technical support cannot resolve it, a full refund will be issued. Please note: Refunds are NOT granted for external content source failures, stream lagging caused by third-party playlist providers, or internet connectivity issues.",
-  },
-  {
-    icon: ShieldAlert,
-    title: "Strict Anti-Chargeback & Friendly Fraud Policy",
-    text: "By purchasing a digital license for SmartCare TV, you acknowledge that you are purchasing an intangible software product. You explicitly waive the right to claim unauthorized transactions or dispute charges via your banking institution. Any forced chargeback initiated without first opening a formal technical support ticket will be treated as contractual breach, resulting in immediate, permanent ban of the application license/hardware ID and submission of compliance records to credit card dispute networks.",
-  },
-  {
-    icon: Lock,
-    title: "Privacy & Data Handling",
-    text: "SmartCare TV operates on a zero-logs, strict privacy model. Your stream credentials, URLs, and authentication keys are processed entirely locally on your device and are never transmitted to, or stored on, our servers.",
   },
 ];
 
@@ -196,61 +178,6 @@ function Pricing() {
                 </div>
               );
             })}
-          </div>
-        </div>
-      </section>
-
-      {/* Legal, Refund & Protection Policies Section */}
-      <section id="legal" className="py-20 md:py-24 bg-surface/50">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 rounded-full glass px-3.5 py-1 text-xs font-semibold uppercase tracking-widest text-primary">
-              Terms &amp; Compliance
-            </div>
-            <h2 className="mt-3 text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight">
-              Legal, refund &amp; protection policies
-            </h2>
-            <p className="mt-3 text-muted-foreground text-sm sm:text-base leading-relaxed">
-              Read carefully before purchase. By completing checkout you agree to all policies below.
-            </p>
-          </div>
-
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
-            {POLICIES.map((p) => {
-              const Icon = p.icon;
-              return (
-                <article
-                  key={p.title}
-                  className="rounded-3xl border border-border/80 bg-card p-6 sm:p-7 shadow-card flex flex-col justify-between"
-                >
-                  <div>
-                    <div className="flex items-center gap-3">
-                      <div className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-accent text-accent-foreground">
-                        <Icon className="h-5 w-5" aria-hidden="true" />
-                      </div>
-                      <h3 className="text-base font-bold text-foreground leading-snug">{p.title}</h3>
-                    </div>
-                    <p className="mt-3.5 text-xs sm:text-sm leading-relaxed text-muted-foreground">
-                      {p.text}
-                    </p>
-                  </div>
-                </article>
-              );
-            })}
-          </div>
-
-          <div className="mt-10 flex flex-wrap items-center justify-center gap-4 text-sm font-semibold text-muted-foreground">
-            <Link to="/refund-policy" className="text-primary hover:underline underline-offset-4">
-              Full Refund Policy
-            </Link>
-            <span>•</span>
-            <Link to="/terms" className="text-primary hover:underline underline-offset-4">
-              Terms of Service
-            </Link>
-            <span>•</span>
-            <Link to="/privacy" className="text-primary hover:underline underline-offset-4">
-              Privacy Policy
-            </Link>
           </div>
         </div>
       </section>
