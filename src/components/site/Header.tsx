@@ -23,7 +23,7 @@ export function Header() {
           <img
             src={logo}
             alt="SMART CARE TV logo"
-            className="h-9 w-9 shrink-0 object-contain md:h-10 md:w-10"
+            className="h-9 w-9 shrink-0 object-contain rounded-lg md:h-10 md:w-10"
           />
           <span className="truncate text-lg font-extrabold tracking-tight md:text-xl">SMART CARE TV</span>
         </Link>

@@ -12,6 +12,7 @@ import {
   Clock,
 } from "lucide-react";
 import heroImage from "@/assets/hero-phone-tv.jpg";
+import logo from "@/assets/logo.png";
 import { Button } from "@/components/ui/button";
 import { DURATIONS } from "@/lib/site";
 
@@ -117,7 +118,7 @@ function Home() {
                 {/* Badge inside TV - positioned top center/left */}
                 <div className="mb-4 sm:mb-6 pl-2 sm:pl-4">
                   <div className="inline-flex items-center gap-2 rounded-full bg-[#2b1212] border border-[#521c1c] px-3.5 py-1 text-[11px] sm:text-xs font-bold uppercase tracking-wider text-[#ef4444] shadow-inner">
-                    <Tv className="w-3.5 h-3.5 text-[#ef4444]" />
+                    <img src={logo} alt="" className="w-4 h-4 rounded-xs object-contain" />
                     <span>SMART CARE TV</span>
                   </div>
                 </div>
@@ -125,7 +126,7 @@ function Home() {
                 {/* TV Message - Fully visible text including TIME */}
                 <div className="pl-2 sm:pl-4 pr-16 sm:pr-24">
                   <h2 className="text-xl sm:text-3xl md:text-[2.25rem] lg:text-[1.85rem] xl:text-[2.4rem] font-black tracking-wide text-white uppercase font-display whitespace-nowrap drop-shadow-md">
-                    IT'S MEDICINE TIME
+                    IT'S MEETING TIME
                   </h2>
                   <p className="mt-2 sm:mt-3.5 text-lg sm:text-2xl md:text-3xl lg:text-xl xl:text-2xl font-bold text-neutral-400 font-mono tracking-tight pl-12 sm:pl-20">
                     8:00 PM
@@ -168,7 +169,7 @@ function Home() {
                       <div className="flex items-center gap-1.5 rounded-lg border border-neutral-200/90 bg-white px-2 py-1 text-[10px] sm:text-[11px] shadow-xs">
                         <Clock className="w-3 h-3 text-[#ef4444] shrink-0" />
                         <span className="font-bold text-neutral-900">8:00 PM</span>
-                        <span className="text-neutral-500 truncate">Medicine Time</span>
+                        <span className="text-neutral-500 truncate">Meeting Time</span>
                       </div>
                       <div className="flex items-center gap-1.5 rounded-lg border border-neutral-200/90 bg-white px-2 py-1 text-[10px] sm:text-[11px] shadow-xs">
                         <Clock className="w-3 h-3 text-[#ef4444] shrink-0" />

@@ -64,7 +64,7 @@ export function Footer() {
             <img
               src={logo}
               alt="SMART CARE TV logo"
-              className="h-9 w-9 shrink-0 object-contain"
+              className="h-9 w-9 shrink-0 object-contain rounded-lg"
               loading="lazy"
             />
             <span className="text-lg font-extrabold tracking-tight">SMART CARE TV</span>
