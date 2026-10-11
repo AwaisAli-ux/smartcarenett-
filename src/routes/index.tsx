@@ -12,7 +12,7 @@ import {
   Clock,
 } from "lucide-react";
 import heroImage from "@/assets/hero-phone-tv.jpg";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/Firefly.png";
 import { Button } from "@/components/ui/button";
 import { DURATIONS } from "@/lib/site";
 
